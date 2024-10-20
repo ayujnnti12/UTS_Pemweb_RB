@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendaftaran Fan Meeting Hanni NewJeans</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="desain-halamanformulir.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="Halaman-Utama.html">Halaman Utama</a></li>
+            <li><a href="Halaman-Tabel.html">Halaman Tabel</a></li>
+        </ul>
+    </div>
+    <button class="hamburger" onclick="toggleSidebar()">☰</button>
+
+    <div class="content">
+        <header class="main-header">
+            <h1>Pendaftaran Fan Meeting Hanni NewJeans</h1>
+            <p>
+                Halo, Bunnies!! Kesempatan langka untuk bertemu dan berinteraksi langsung 
+                dengan Hanni Pham dari <em>NewJeans</em> telah tiba! 
+                Yuk, daftarkan dirimu untuk menghadiri Fan Meeting ini. 
+                Jangan lewatkan momen spesial untuk mengenal lebih dekat idol favorit kita, 
+                bertanya langsung, dan menikmati sesi foto bersama.
+            </p>
+        </header>
+
+        <form action="Halaman-Tabel.html" method="GET" itemscope itemtype="http://schema.org/Person">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" name="email" required itemprop="email">
+            </div>
+
+            <div class="form-group">
+                <label for="fullname">Nama Lengkap</label>
+                <input type="text" class="form-control" id="fullname" name="fullname" required itemprop="name">
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" name="password" required itemprop="password">
+            </div>
+
+            <label>Gender</label>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" name="gender" value="male" required itemprop="gender">
+                    <label class="form-check-label">Laki-laki</label>
+                </div>
+                    <div class="form-check">
+                    <input type="radio" class="form-check-input" name="gender" value="female" itemprop="gender">
+                    <label class="form-check-label">Perempuan</label>
+                </div>
+
+            <div class="form-group">
+                <label for="city">Asal Kota</label>
+                <select id="city" class="form-control" name="city" required itemprop="addressLocality">
+                <option value="Jakarta">Jakarta</option>
+                <option value="Lampung">Lampung</option>
+                <option value="Bandung">Bandung</option>
+                <option value="Surabaya">Surabaya</option>
+                <option value="Semarang">Semarang</option>
+                <option value="Yogyakarta">Yogyakarta</option>
+            </select>
+
+            <div class="form-group">
+                <label for="date">Tanggal Fan Meeting</label>
+                <input type="date" class="form-control" id="date" name="date" required itemprop="birthDate">
+            </div>
+
+            <label>Darimana Bunnies Mendapatkan Informasi Fan Meeting</label>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" name="source" value="Instagram">
+                <label class="form-check-label">Instagram</label>
+            </div>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" name="source" value="Twitter">
+                <label class="form-check-label">Twitter</label>
+            </div>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" name="source" value="Teman">
+                <label class="form-check-label">Teman</label>
+            </div>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" name="source" value="Other">
+                <label class="form-check-label">Lainnya</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 Website Fanbase Hanni NewJeans | Dibuat oleh Ayu Jannati Ali Putri</p>
+    </footer>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('active'); 
+        }
+    </script>
+</body>
+</html>

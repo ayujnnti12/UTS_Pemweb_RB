@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Utama - Hanni NewJeans</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="desain-halamanutama.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="Halaman-Utama.html">Halaman Utama</a></li>
+            <li><a href="Halaman-Formulir.html">Halaman Formulir</a></li>
+            <li><a href="Halaman-Tabel.html">Halaman Tabel</a></li>
+        </ul>
+    </div>
+    <button class="hamburger" onclick="toggleSidebar()">☰</button>
+
+    <div class="content">
+        <header>
+            <img src="asset/logoitera.jpg" alt="Logo ITERA" class="logo">
+            <h1 class="text-center">Hanni Pham</h1>
+        </header>
+
+        <div class="intro text-center">
+            <p>Welcome Bunnies!! Di website ini, kamu akan menemukan informasi terkini tentang Hanni Pham <em>NewJeans</em>. 
+                Bunnies akan mendapatkan fakta-fakta unik tentang Hanni yang mungkin belum kamu tahu. 
+                Ayo, ikuti selalu perjalanan seru Hanni dan member <em>NewJeans</em> bersama-sama!</p>
+        </div>
+
+        <!-- Grid Foto -->
+        <div class="photo-grid">
+            <div class="grid-container">
+                <img src="asset/hanni1.jpg" alt="Hanni 1">
+                <img src="asset/hanni2.jpg" alt="Hanni 2">
+                <img src="asset/hanni3.jpg" alt="Hanni 3">
+                <img src="asset/hanni4.jpg" alt="Hanni 4">
+                <img src="asset/hanni5.jpg" alt="Hanni 5">
+                <img src="asset/hanni6.jpg" alt="Hanni 6">
+                <img src="asset/hanni7.jpg" alt="Hanni 7">
+            </div>
+        </div>
+
+        <div class="button-container text-center">
+            <button class="button" onclick="scrollToSection('profil')">Profil</button>
+            <button class="button" onclick="scrollToSection('karir')">Perjalanan Karir</button>
+            <button class="button" onclick="scrollToSection('funfact')">Fun Fact</button>
+        </div>
+
+        <section id="profil" class="section-content" itemscope itemtype="http://schema.org/Person">
+            <h2 itemprop="name">Hanni Pham</h2>
+            <p>
+                Lahir pada <strong itemprop="birthDate" content="2004-10-06">6 Oktober 2004</strong>, di Melbourne, Victoria, Australia. 
+                Ia berasal dari keluarga keturunan Vietnam yang kaya akan budaya. Sejak kecil, Hanni adalah penggemar 
+                <em>One Direction</em>, dengan Niall Horan sebagai biasnya. 
+                Pada tahun <strong>2019</strong>, Hanni bergabung dengan grup cover dance K-pop Australia bernama 
+                <em>AEMINA</em>. Ia lulus Audisi Global Plus dan menjadi trainee di tahun <strong>2020</strong>.
+            </p>
+        </section>        
+
+        <section id="karir" class="section-content" itemscope itemtype="http://schema.org/CreativeWork">
+            <h2>Perjalanan Karir</h2>
+            <ul class="no-bullet">
+                <li>
+                    <strong>2021:</strong> <span itemprop="about">Penampilan dalam MV <em>BTS</em> berjudul "<em>Permission to Dance</em>". 
+                    Hanni muncul dalam peran kecil bersama calon anggota <em>NewJeans</em>, Minji.</span>
+                </li>
+                <li>
+                    <strong>2022:</strong> <span itemprop="about">Debut resmi. Hanni diperkenalkan sebagai anggota girl grup baru ADOR, <em>NewJeans</em>, pada 21 Juli 2022.</span>
+                </li>
+            </ul>
+        </section>        
+
+        <section id="funfact" class="section-content">
+            <h2>Fun Fact</h2>
+            <ul class="no-bullet">
+                <li>
+                    Hanni adalah idol Australia-Vietnam pertama yang debut di bawah HYBE Labels.
+                </li>
+                <li>
+                    Ia memegang sabuk hitam tingkat 2 di taekwondo dan berlatih di dojo milik kakeknya. 
+                    Hanni dapat melakukan tendangan depan sambil melompat dengan kaki kanan sebagai kaki penendang.
+                </li>
+                <li>
+                    Jika tidak menjadi idol, ia lebih memilih untuk mengambil jurusan sains dan kedokteran 
+                    atau filmografi jika melanjutkan pendidikan di universitas.
+                </li>
+            </ul>
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2024 Website Fanbase Hanni Pham | Dibuat oleh Ayu Jannati Ali Putri</p>
+    </footer>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('active');
+        }
+
+        function scrollToSection(id) {
+            const section = document.getElementById(id);
+            section && section.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
